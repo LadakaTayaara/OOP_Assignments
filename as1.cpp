@@ -83,31 +83,36 @@ int main()
 {
     Shape s;   // Object creation
     int choice;
+    char cch='y';
+    while(cch!='n'){
+        cout << "Enter your choice\n1. Rectangle\n2. Triangle\n3. Square\n4. Circle\n5. Sphere\n6. Cylinder\n7. Exit\n";
+        cin >> choice;
+        switch(choice) {
+            case 1: s.rectangle(); 
+            break;
+            
+            case 2: s.triangle(); 
+            break;
+            
+            case 3: s.square(); 
+            break;
+            
+            case 4: s.circle();
+            break;
+            
+            case 5: s.sphere(); 
+            break;
+            
+            case 6: s.cylinder(); 
+            break;
 
-    cout << "Enter your choice\n1. Rectangle\n2. Triangle\n3. Square\n4. Circle\n5. Sphere\n6. Cylinder\n";
-    cin >> choice;
-
-    switch(choice) {
-        case 1: s.rectangle(); 
-        break;
-        
-        case 2: s.triangle(); 
-        break;
-        
-        case 3: s.square(); 
-        break;
-        
-        case 4: s.circle();
-        break;
-        
-        case 5: s.sphere(); 
-        break;
-        
-        case 6: s.cylinder(); 
-        break;
-        
-        default: cout << "Invalid choice\n";
+            case 7:cch='n';
+            break;
+            
+            default: cout << "Invalid choice\n";
+        }
     }
+    
 
     return 0;
 }
