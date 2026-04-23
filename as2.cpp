@@ -73,7 +73,8 @@ int main(){
             break;
             case 5:b1.displaykyc();
             break;
-            case 6:break;
+            case 6:ch='n';
+            return 0;
         }
         cout<<"do you want to continue?(y/n)\n";
         cin>>ch;
