@@ -1,0 +1,5 @@
+1 Alice 85.5
+2 Bob 92.0
+3 Charlie 78.3
+4 Diana 95.1
+5 Eve 88.7

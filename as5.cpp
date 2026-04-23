@@ -1,33 +1,29 @@
-#include <iostream>  
-using namespace std; 
+#include <iostream>
+using namespace std;
 
-// Base class
 class shape{
 protected:
-    int side1, side2;   // side1 = length/radius, side2 = breadth
+    int side1, side2;
 
 public:
-    // Function to accept input
     void accept(int ch){
-        if(ch==1){                           // If rectangle is selected
+        if(ch==1){
             cout<<"Enter length: ";
-            cin>>side1;  
+            cin>>side1;
 
             cout<<"Enter breadth: ";
-            cin>>side2; 
+            cin>>side2;
         }
-        else{                                      // If circle is selected
+        else{
             cout<<"Enter radius: ";
-            cin>>side1;  
+            cin>>side1;
         }
-    }  // <-- FIXED: added missing brace here
+    }
 
-    // Pure virtual functions (overridden in derived classes)
     virtual void area()=0;
     virtual void perimeter()=0;
 };
 
-// Derived class for Rectangle
 class rectangle: public shape{
 public:
     void area(){
@@ -39,7 +35,6 @@ public:
     }
 };
 
-// Derived class for Circle
 class circle: public shape{
 public:
     void area(){
@@ -51,9 +46,8 @@ public:
     }
 };
 
-// Main function
 int main(){
-    int ch=0;      
+    int ch=0;
     shape *s;
 
     while(ch!=3){

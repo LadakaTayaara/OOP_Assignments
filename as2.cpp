@@ -1,5 +1,3 @@
-//define class bank
-
 #include <iostream>
 #include <random>
 using namespace std;
@@ -19,7 +17,7 @@ class bank{
 
 void bank::deposit(){
     double a;
-    cout<<"\nEnter the amount you want to deposit\n";
+    cout<<"\\nEnter the amount you want to deposit\n";
     cin>>a;
     bal+=a;
     cout<<"Amount successfully deposited\n";
